@@ -29,9 +29,11 @@ async function createBundle() {
   }
 
   // Создаём файл bundle.css в папке project-dist
+  const cssBufferStr = cssBufferArr.join('\n');
+
   writeFile(
     path.join(__dirname, 'project-dist', 'bundle.css'),
-    cssBufferArr
+    cssBufferStr
   );
 }
 
